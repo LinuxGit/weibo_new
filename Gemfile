@@ -13,6 +13,8 @@ gem 'turbolinks', '2.5.3'
 gem 'jbuilder', '2.2.5'
 gem 'sdoc', '0.4.0', group: :doc
 
+gem 'font-awesome-rails', '4.2.0.0'
+
 group :development, :test do
   gem 'byebug', '3.5.1'
   gem 'web-console', '2.0.0'

@@ -9,9 +9,18 @@
 </head>
 <body>
   <%= render 'layouts/header' %>
+  <% if current_page?('/') %>
+    <%= render 'layouts/carousel' %>
+    <%= render 'layouts/home_icon' %>
+    <div class="container">
+      <hr />
+    </div>
+    <%= render 'layouts/home_designers' %>
+    <%= render 'layouts/home_contact' %>
+  <% end %>
   <div class="container">
     <% flash.each do |message_type, message| %>
-      content_tag(:div, message, class: "alert alert-#{message_type}")
+      <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
     <% end %>
     <%= yield %>
     <%= render 'layouts/footer' %>
